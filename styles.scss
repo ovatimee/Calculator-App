@@ -1,0 +1,91 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap");
+
+@function color($color-nanme) {
+  @return map-get($bg-colors, $color-nanme);
+}
+
+$bg-colors: (
+  main-bg: hsl(222, 26%, 31%),
+  keyboard-bg: hsl(223, 31%, 20%),
+  screen-bg: hsl(224, 36%, 15%),
+);
+
+$key-colors: (
+  key-bg: hsl(225, 21%, 49%),
+  key-shadow: hsl(224, 28%, 35%),
+  toggle-bg-red: hsl(6, 63%, 50%),
+  red-key-shadow: hsl(6, 70%, 34%),
+  light-grayish-orange: hsl(30, 25%, 89%),
+  grayish-orange: hsl(28, 16%, 65%),
+);
+
+.calc-container {
+  max-width: 500px;
+  min-height: 375px;
+  display: grid;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.app__header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .app__theme {
+    margin-left: auto;
+    padding-right: 20px;
+  }
+}
+
+.output__container {
+  padding: 1.5rem;
+
+
+  .result {
+    width: 100%;
+    padding: 1rem;
+    outline: none;
+    border-bottom: 1px solid;
+    text-align: right;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: "League Spartan", sans-serif;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    margin: 0;
+  }
+}
+
+.calc__board {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 1.2rem;
+  padding: 2rem;
+
+  .col-span-2 {
+    grid-column: span 2;
+  }
+  .btn {
+    font-size: 32px;
+    font-family: "League Spartan", sans-serif;
+    padding: 0.5rem;
+    border-radius: 8px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
