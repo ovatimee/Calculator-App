@@ -28,27 +28,40 @@
           align-items: center;
 }
 
+.app__header .app__header-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
 .app__header .app__theme {
   margin-left: auto;
+  font-size: 12px;
   padding-right: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.app__header .toggle__theme {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 2px solid;
+  border-radius: 5px;
+  background-color: bisque;
 }
 
 .output__container {
-  padding: 1.5rem;
-}
-
-.output__container .result {
   width: 100%;
-  padding: 1rem;
-  outline: none;
-  border-bottom: 1px solid;
+  padding: 1rem 2rem;
+  border: 1px solid;
   text-align: right;
   font-size: 36px;
   font-weight: 700;
   font-family: "League Spartan", sans-serif;
   -webkit-appearance: none;
   -moz-appearance: textfield;
-  margin: 0;
+  margin: 2rem 0 1rem  0;
+  border-radius: 8px;
 }
 
 .calc__board {
@@ -58,6 +71,8 @@
       grid-template-columns: repeat(4, auto);
   gap: 1.2rem;
   padding: 2rem;
+  background-color: bisque;
+  border-radius: 8px;
 }
 
 .calc__board .col-span-2 {

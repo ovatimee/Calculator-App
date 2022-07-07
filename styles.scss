@@ -1,9 +1,6 @@
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+@import "compass/css3";
+*, *:after, *:before{
+  @include box-sizing(border-box);
 }
 
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap");
@@ -40,14 +37,43 @@ $key-colors: (
   justify-content: space-around;
   align-items: center;
 
+  .app__header-title{
+    font-size: 20px;
+    font-weight: 700;
+    
+  }
+
   .app__theme {
     margin-left: auto;
+    font-size: 12px;
     padding-right: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .toggle__theme{
+    float: left;
+    width: fit-content;
+    border: 2px solid;
+    border-radius: 5px;
+    background-color: bisque;
+
+    label{
+      width: 90px;
+      height: 42px;
+      background: #ccc;
+      position: relative;
+      display: inline-block;
+      border-radius: 46px;
+      background: red;
+    }
+    .toggle__theme-btn{
+      position: relative;
+    }
   }
 }
 
 .output__container {
-  padding: 1.5rem;
 
 
   .result {
@@ -61,7 +87,8 @@ $key-colors: (
     font-family: "League Spartan", sans-serif;
     -webkit-appearance: none;
     -moz-appearance: textfield;
-    margin: 0;
+    margin: 2rem 0 1rem  0;
+    border-radius: 8px;
   }
 }
 
@@ -70,6 +97,8 @@ $key-colors: (
   grid-template-columns: repeat(4, auto);
   gap: 1.2rem;
   padding: 2rem;
+  background-color: bisque;
+  border-radius: 8px;
 
   .col-span-2 {
     grid-column: span 2;

@@ -17,21 +17,22 @@
     <main class="calc-container">
       <div class="app__header">
         <h3 class="app__header-title">calc</h3>
-        <h3 class="app__theme">Theme</h3>
+        <p class="app__theme">Theme</p>
         <div class="toggle__theme">
-          <input class="toggle__theme-btn" type="button" />
-          <input class="toggle__theme-btn" type="button" />
-          <input class="toggle__theme-btn" type="button" />
+          <input id="theme-1" class="toggle__theme-btn" type="checkbox" />
+          <label for="theme-1"></label>
+          <input id="theme-2" class="toggle__theme-btn" type="checkbox" />
+          <label for="theme-2"></label>
+          <input id="theme-3" class="toggle__theme-btn" type="checkbox" />
+          <label for="theme-3"></label>
         </div>
       </div>
-      <div class="output__container">
-        <input class="result" type="number" value="0" readonly placeholder="0"/>
-      </div>
+      <div class="output__container"></div>
       <div class="calc__board">
         <button class="btn">7</button>
         <button class="btn">8</button>
         <button class="btn">9</button>
-        <button class="btn">DEL</button>
+        <button class="btn" data-action="multiply">DEL</button>
         <button class="btn">4</button>
         <button class="btn">5</button>
         <button class="btn">6</button>
@@ -39,13 +40,13 @@
         <button class="btn">1</button>
         <button class="btn">2</button>
         <button class="btn">3</button>
-        <button class="btn">-</button>
-        <button class="btn">.</button>
+        <button class="btn" data-action="subtract">-</button>
+        <button class="btn" data-action="decimal">.</button>
         <button class="btn">0</button>
-        <button class="btn">/</button>
-        <button class="btn">X</button>
-        <button class="btn col-span-2">=</button>
-        <button class="btn col-span-2">Reset</button>
+        <button class="btn" data-action="devide">/</button>
+        <button class="btn" data-action="multiply">X</button>
+        <button class="btn col-span-2" data-action="reset">Reset</button>
+        <button class="btn col-span-2" data-action="caculate">=</button>
       </div>
 
       <footer class="attribution">
